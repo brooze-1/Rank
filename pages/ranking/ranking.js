@@ -42,7 +42,7 @@ Page({
       // 当当前点击的排名分类页面名称为"学习率排名"时执行下面这个分支
       if (self.data.currentRankType === self.data.rankTypes.slice(0,1)[0]){
         wx:wx.request({
-          url: 'http://139.196.82.182:8081/school/sortByRates',
+          url: 'http://xxxx',
           method: "GET",
           success: (result) => {
             console.log(result.data);
@@ -58,7 +58,7 @@ Page({
       // 当当前点击的排名分类页面名称为"学院积分排名"时执行下面这个分支
       if (self.data.currentRankType === self.data.rankTypes.slice(1,2)[0]){
         wx:wx.request({
-          url: 'http://139.196.82.182:8081/school/sortByPoints',
+          url: 'http://xxx',
           method: "GET",
           success: (result) => {
             console.log(result.data);
@@ -75,7 +75,7 @@ Page({
       if (self.data.currentRankType === self.data.rankTypes.slice(2,3)[0])
       {
         wx:wx.request({
-          url: 'http://139.196.82.182:8081/user/queryUserPointsSort',
+          url: 'http://xxx',
           method: "GET",
           success: (result) => {
             console.log(result.data);
