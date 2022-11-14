@@ -1,0 +1,107 @@
+/* 顶部样式文字 */
+.page-head {
+  background-color: rgb(250, 133, 133);
+}
+.page-title {
+  font-size: 52rpx;
+  text-align: center;
+}
+
+/* 导航框样式 */
+.rank-types {
+  height: 7vh;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  background-color: rgb(250, 171, 171);
+  border-radius: 5px;
+  
+}
+
+.rank-type {
+  flex: 1;
+  font-size: 35rpx;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10rpx;
+  padding-top: 15rpx;
+  transition: border .3s;
+  color: rgb(85, 81, 81);
+}
+
+.rank-type{
+  background-color: rgb(247, 67, 91);
+  border-bottom-color: #3cc51f;
+}
+
+/* 榜单内容样式 */
+.rank-items{
+  margin-top: -20px;
+  background-color: rgb(236, 83, 83);
+  border-radius: 10px;
+}
+
+.rank {
+  margin-top: 10px;
+  flex-direction: row;
+  height: 40px;
+  font-size: 32rpx;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 30rpx;
+
+}
+
+.school-meta {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ddd;
+}
+
+.school-meta{
+display: flex;
+height: 100%;
+color: #333;
+text-align: center;
+}
+
+.rank-num {
+  width: 15%;
+  color: #333;
+  flex-direction: column;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.school-name {
+  width: 35%;
+  color: #333;
+  flex-direction: column;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.study_ratio {
+  width: 28%;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.study_rates{
+  width: 20%;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.rank-meta {
+  color: #ddd;
+  font-size: 28rpx;
+}
+
+
+

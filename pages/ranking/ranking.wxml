@@ -1,0 +1,69 @@
+<view class="rank-page">
+    <!-- 顶部栏 -->
+    <view class="page-head">
+        <view class="page-title">YOUTH LEARNING</view>    
+    </view>
+    <!-- 顶部滑块 -->
+    <view class="rank-types">
+        <view
+            class="rank-type {{currentRankType == rankType ? 'true' : null }}"
+            data-rank-type="{{rankType}}" bindtap="changeRankType"
+            wx:for="{{rankTypes}}" wx:key="idx" wx:for-item="rankType">{{rankType}}
+        </view>
+    </view>
+
+    <!-- 三分类 根据currentRankType动态渲染页面内容 -->
+    <!-- 学习率排名页面 -->
+    <view>
+      <view wx:if="{{currentRankType == '学习率排名'}}">
+        <view class="rank-items" >
+        <block wx:for="{{rankItems}}" wx:key="idx" wx:for-index="idx" wx:for-item="rank">
+            <view class="rank">      
+                <view class="rank-data">
+                    <view class="school-meta">
+                        <view class="rank-num">{{idx + 1}}</view>
+                        <view class="school-name">{{rank.school}}</view>
+                        <view class="study_ratio">{{rank.studyNumber}}/{{rank.totalNumber}}</view>
+                        <view class="study_rates">{{rank.rates}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+      </view>
+      </view>
+      <!-- 学院积分排名页面 -->
+      <view wx:elif="{{currentRankType == '学院积分排名'}}">
+        <view class="rank-items">
+        <block wx:for="{{rankItems}}" wx:key="idx" wx:for-index="idx" wx:for-item="rank">
+            <view class="rank">   
+                <view class="rank-data" >
+                    <view class="school-meta">
+                        <view class="rank-num">{{idx + 1}}</view>
+                        <view class="school-name">{{rank.school}}</view>
+                        <view class="study_ratio">{{rank.studyNumber}}/{{rank.totalNumber}}</view>
+                        <view class="study_rates">{{rank.totalPoints}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+      </view>
+      </view>
+      <!-- 个人积分排名页面 -->
+      <view wx:else="{{currentRankType == '个人积分排名' ?'true':'false'}}">
+        <view class="rank-items">
+        <block wx:for="{{rankItems}}" wx:key="idx" wx:for-index="idx" wx:for-item="rank">
+            <view class="rank">
+                <view class="rank-data">
+                    <view class="school-meta">
+                        <view class="rank-num">{{idx + 1}}</view>
+                        <view class="school-name">{{rank.school}}</view>
+                        <view class="study_ratio">{{rank.name}}</view>
+                        <view class="study_rates">{{rank.totalPoints}}</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+      </view>
+    </view>
+</view>
+</view>
